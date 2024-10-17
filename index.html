@@ -13,207 +13,252 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/logo.jpeg" alt="Spark Invotech Logo" />
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+<!-- Header Section -->
+<!-- Header Section -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Spark Invotech Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+
+
+
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Innovating the Future</h1>
-            <p>Empowering industries with cutting-edge technology solutions.</p>
-            <a href="#solutions" class="btn">Discover More</a>
-        </div>
-        <div class="hero-slider">
-            <div class="slides">
-                <div class="slide" style="background-image: url('images/hero1.jpg');"></div>
-                <div class="slide" style="background-image: url('images/hero2.jpg');"></div>
-                <div class="slide" style="background-image: url('images/hero3.jpg');"></div>
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+    
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('images/hero1.jpg');">
+              <div class="hero-content">
+                <h1>Innovating the Future</h1>
+                <p>Empowering industries with cutting-edge technology solutions.</p>
+                <a href="#solutions" class="btn btn-primary">Discover More</a>
+              </div>
             </div>
-            <div class="slider-controls">
-                <span class="prev-slide" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></span>
-                <span class="next-slide" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></span>
-            </div>
+            <div class="carousel-item" style="background-image: url('images/hero2.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('images/hero3.jpg');"></div>
+          </div>
+    
+          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-    </section>
+      </section>
+    
 
-     <!-- About Us Section -->
-     <section id="about" class="about">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>Welcome to Spark Invotech, where innovation meets technology with a spark. Founded in 2024 by a dedicated team of four visionary members, we specialize in pioneering solutions in agritech, IoT, and R&D electronics. At Spark Invotech, we blend cutting-edge products with exceptional service to drive advancements in these transformative domains. Our mission is to harness the power of technology to solve real-world challenges, empowering industries and communities alike. Join us on our journey as we continue to push the boundaries of what's possible in the digital age. Discover how Spark Invotech can ignite innovation for your business today.</p>
-            <br>
-            <div class="about-values">
-                <div class="value-card">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Our Mission</h3>
-                    <p>To deliver innovative technology solutions that drive progress and improve lives.</p>
+<!-- About Us Section -->
+<section id="about" class="about">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>Welcome to Spark Invotech, where innovation meets technology with a spark. Founded in 2024 by a dedicated team of four visionary members, we specialize in pioneering solutions in agritech, IoT, and R&D electronics. At Spark Invotech, we blend cutting-edge products with exceptional service to drive advancements in these transformative domains. Our mission is to harness the power of technology to solve real-world challenges, empowering industries and communities alike. Join us on our journey as we continue to push the boundaries of what's possible in the digital age. Discover how Spark Invotech can ignite innovation for your business today.</p>
+        <div class="about-values">
+            <div class="value-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Our Mission</h3>
+                <p>To deliver innovative technology solutions that drive progress and improve lives.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-eye"></i>
+                <h3>Our Vision</h3>
+                <p>To be at the forefront of technological innovation, shaping a smarter future.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Our Values</h3>
+                <p>Innovation, Integrity, and Impact are the core values that guide us.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Solutions Section -->
+<section id="solutions" class="solutions">
+    <h2>Our Solutions</h2>
+    <div class="solutions-container">
+        <!-- Products Section -->
+        <div class="solutions-category products">
+            <h3>Our Products</h3>
+            <div class="product-cards">
+                <!-- Product 1: OCU -->
+                <div class="solution-card">
+                    <div class="solution-image" style="background-image: url('images/ocu.jpg');" aria-hidden="true"></div>
+                    <div class="solution-content">
+                        <h4>OCU (Optical Control Unit)</h4>
+                        <p>An advanced optical control unit for precise machinery operations.</p>
+                        <a href="products/ocu.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-                <div class="value-card">
-                    <i class="fas fa-eye"></i>
-                    <h3>Our Vision</h3>
-                    <p>To be at the forefront of technological innovation, shaping a smarter future.</p>
+                <!-- Product 2: Biogas Plant -->
+                <div class="solution-card">
+                    <div class="solution-image" style="background-image: url('images/biogas.jpeg');" aria-hidden="true"></div>
+                    <div class="solution-content">
+                        <h4>Biogas Plant</h4>
+                        <p>Efficient biogas solutions for sustainable energy production.</p>
+                        <a href="products/biogas.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-                <div class="value-card">
-                    <i class="fas fa-hands-helping"></i>
-                    <h3>Our Values</h3>
-                    <p>Innovation, Integrity, and Impact are the core values that guide us.</p>
+                <!-- Product 3: ECU -->
+                <div class="solution-card">
+                    <div class="solution-image" style="background-image: url('images/ecu.jpg');" aria-hidden="true"></div>
+                    <div class="solution-content">
+                        <h4>ECU (Electronic Control Unit)</h4>
+                        <p>State-of-the-art electronic control units for various applications.</p>
+                        <a href="products/ecu.html" class="btn">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- Solutions Section -->
-    <section id="solutions" class="solutions">
-        <h2>Our Solutions</h2>
-        <div class="solutions-container">
-            <!-- Products Section -->
-            <div class="solutions-category products">
-                <h3>Our Products</h3>
-                <div class="product-cards">
-                    <!-- Product 1: OCU -->
-                    <div class="solution-card">
-                        <div class="solution-image" style="background-image: url('images/ocu.jpg');" aria-hidden="true"></div>
-                        <div class="solution-content">
-                            <h4>OCU (Optical Control Unit)</h4>
-                            <p>An advanced optical control unit for precise machinery operations.</p>
-                            <a href="products/ocu.html" class="btn">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Product 2: Biogas Plant -->
-                    <div class="solution-card">
-                        <div class="solution-image" style="background-image: url('images/biogas.jpeg');" aria-hidden="true"></div>
-                        <div class="solution-content">
-                            <h4>Biogas Plant</h4>
-                            <p>Efficient biogas solutions for sustainable energy production.</p>
-                            <a href="products/biogas.html" class="btn">Learn More</a>
-                        </div>
-                    </div>
-                    <!-- Product 3: ECU -->
-                    <div class="solution-card">
-                        <div class="solution-image" style="background-image: url('images/ecu.jpg');" aria-hidden="true"></div>
-                        <div class="solution-content">
-                            <h4>ECU (Electronic Control Unit)</h4>
-                            <p>State-of-the-art electronic control units for various applications.</p>
-                            <a href="products/ecu.html" class="btn">Learn More</a>
-                        </div>
-                    </div>
+<!-- Services Section -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-content">
+        <!-- Services Text -->
+        <div class="services-text">
+            <h3>IoT Integration in Industrial Machinery</h3>
+            <p>We specialize in integrating Internet of Things (IoT) technology into industrial machinery to enhance efficiency, connectivity, and data analytics. Our solutions help industries monitor equipment in real-time, predict maintenance needs, and optimize operations.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+
+        <!-- Services Image -->
+        <div class="services-image">
+            <img src="images/iot-integration-large.jpg" alt="IoT Integration">
+        </div>
+    </div>
+</section>
+
+
+
+ <!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Contact Us</h3>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <span class="bar"></span>
                 </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <span class="bar"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <span class="bar"></span>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <span class="bar"></span>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Sri Sairam Techno Incubator Foundation, Chennai, India</p>
+            <p><i class="fas fa-phone-alt"></i> +91 7305634366</p>
+            <p><i class="fas fa-envelope"></i> contact@sparkinvotech@gmail.com</p>
+
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.230464176058!2d80.0565622!3d12.9615451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f53e694f0465%3A0x9fe2a8ace29ebc1c!2sSri%20Sairam%20Techno%20Incubator%20Foundation!5e0!3m2!1sen!2sin!4v1697026123456!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-content">
-            <div class="services-text">
-                <h3>IoT Integration in Industrial Machinery</h3>
-                <p>We specialize in integrating Internet of Things (IoT) technology into industrial machinery to enhance efficiency, connectivity, and data analytics. Our solutions help industries monitor equipment in real-time, predict maintenance needs, and optimize operations.</p>
-                <a href="#contact" class="btn">Contact Us</a>
-            </div>
-            <div class="services-image">
-                <img src="images/iot-integration-large.jpg" alt="IoT Integration">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <h3>Contact Us</h3>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <span class="bar"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <span class="bar"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject">
-                        <span class="bar"></span>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <span class="bar"></span>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-            <div class="contact-details">
-                <h3>Contact Information</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Sri Sairam Techno Incubator Foundation, Chennai, India</p>
-                <p><i class="fas fa-phone-alt"></i> +91 7305634366</p>
-                <p><i class="fas fa-envelope"></i> contact@sparkinvotech@gmail.com</p>
-                <div class="social-media">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div class="map">
-                    <!-- Embed Google Map -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.230464176058!2d80.0565622!3d12.9615451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f53e694f0465%3A0x9fe2a8ace29ebc1c!2sSri%20Sairam%20Techno%20Incubator%20Foundation!5e0!3m2!1sen!2sin!4v1697026123456!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="images/logo2.png" alt="Spark Invotech Logo">
-                <h3>SPARK INVOTECH PVT LTD</h3>
-                <p>Empowering industries with cutting-edge technology solutions.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home"><i class="fas fa-angle-right"></i> Home</a></li>
-                    <li><a href="#solutions"><i class="fas fa-angle-right"></i> Solutions</a></li>
-                    <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
-                    <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
-                    <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
-                </ul>
-            </div>
-            <!-- Added Query Section in Footer -->
-            <div class="footer-query">
-                <h3>Have a Query?</h3>
-                <p>We're here to help. Reach out to us with any questions you have.</p>
-                <a href="#contact" class="btn">Contact Us</a>
-            </div>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Logo and Description -->
+        <div class="footer-logo">
+            <img src="images/logo2.png" alt="Spark Invotech Logo">
+            <h3>SPARK INVOTECH PVT LTD</h3>
+            <p>Empowering industries with cutting-edge technology solutions.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Spark Invotech. All Rights Reserved.</p>
-        </div>
-    </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></a>
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home"><i class="fas fa-angle-right"></i> Home</a></li>
+                <li><a href="#solutions"><i class="fas fa-angle-right"></i> Solutions</a></li>
+                <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Query Section -->
+        <div class="footer-query">
+            <h3>Have a Query?</h3>
+            <p>We're here to help. Reach out to us with any questions you have.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Spark Invotech. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></a>
+
 
     <!-- JavaScript File -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+    </script>
+});
+
 </body>
 </html>
+
