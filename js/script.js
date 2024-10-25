@@ -111,16 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    /* Show Back to Top Button when scrolling */
-    window.onscroll = function() {
-    const backToTopButton = document.querySelector('.back-to-top');
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
-    }
-}
-
     // Create slide indicators
     function createIndicators() {
         slides.forEach((_, index) => {
@@ -130,6 +120,54 @@ document.addEventListener('DOMContentLoaded', () => {
             indicatorsContainer.appendChild(indicator);
         });
     }
+
+    // Get all modal open buttons
+    const openModalButtons = document.querySelectorAll('.open-modal');
+
+    // Loop through each button and attach a click event
+    openModalButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent page jump to the top
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "block"; // Open modal
+            }
+        });
+    });
+
+    // Get all close buttons
+    const closeButtons = document.querySelectorAll('.close');
+
+    // Loop through each close button and attach a click event
+    closeButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.style.display = "none"; // Close modal
+        });
+    });
+
+    // Close modal if user clicks outside the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none"; // Close modal
+        }
+    });
+
+    // Scroll with an offset for fixed navbar
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const offset = 10; // Adjust this based on your navbar height
+
+            window.scrollTo({
+                top: targetElement.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        });
+    });
 
     createIndicators();
     updateIndicators();
