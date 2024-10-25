@@ -1,4 +1,7 @@
 /* General Styles */
+
+
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     color: #333;
@@ -1367,22 +1370,14 @@ header {
     right: 40px;
     background-color: #00c4ff;
     color: #fff;
-    padding: 12 px;
+    padding: 12px;
     border-radius: 50%;
-    box-shadow: 0 4 px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3 s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
     display: none;
-    font-size: 1.2 em;
+    font-size: 1.2em;
 }
 
 .back-to-top:hover {
     background-color: #009fbb;
 }
-
-
-
-
-
-
-
-
