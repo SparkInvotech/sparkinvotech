@@ -64,7 +64,7 @@
           </div>
     
           <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
@@ -103,6 +103,7 @@
 
 
 <!-- Solutions Section -->
+
 <section id="solutions" class="solutions">
     <h2>Our Solutions</h2>
     <div class="solutions-container">
@@ -116,7 +117,8 @@
                     <div class="solution-content">
                         <h4>OCU (Optical Control Unit)</h4>
                         <p>An advanced optical control unit for precise machinery operations.</p>
-                        <a href="products/ocu.html" class="btn">Learn More</a>
+                        <a href="javascript:void(0)" class="open-modal btn" data-modal="ocuModal">Learn More</a>
+
                     </div>
                 </div>
                 <!-- Product 2: Biogas Plant -->
@@ -125,7 +127,8 @@
                     <div class="solution-content">
                         <h4>Biogas Plant</h4>
                         <p>Efficient biogas solutions for sustainable energy production.</p>
-                        <a href="products/biogas.html" class="btn">Learn More</a>
+                        <a href="javascript:void(0)" class="open-modal btn" data-modal="ocuModal">Learn More</a>
+
                     </div>
                 </div>
                 <!-- Product 3: ECU -->
@@ -134,13 +137,43 @@
                     <div class="solution-content">
                         <h4>ECU (Electronic Control Unit)</h4>
                         <p>State-of-the-art electronic control units for various applications.</p>
-                        <a href="products/ecu.html" class="btn">Learn More</a>
+                        <a href="javascript:void(0)" class="open-modal btn" data-modal="ocuModal">Learn More</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Product Modals -->
+<div id="ocu-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>OCU (Optical Control Unit)</h3>
+        <img src="images/ocu.jpg" alt="OCU Image">
+        <p>An advanced optical control unit designed for precise operations in machinery. This unit utilizes the latest in optical technology for enhanced control and reliability.</p>
+    </div>
+</div>
+
+<div id="biogas-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Biogas Plant</h3>
+        <img src="images/biogas.jpeg" alt="Biogas Plant Image">
+        <p>The biogas plant provides an efficient solution for converting organic waste into renewable energy, promoting sustainability and reducing waste.</p>
+    </div>
+</div>
+
+<div id="ecu-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>ECU (Electronic Control Unit)</h3>
+        <img src="images/ecu.jpg" alt="ECU Image">
+        <p>Our Electronic Control Unit (ECU) offers top-tier performance for a wide range of applications, providing robust control and automation.</p>
+    </div>
+</div>
+
 
 
 <!-- Services Section -->
@@ -156,7 +189,7 @@
 
         <!-- Services Image -->
         <div class="services-image">
-            <img src="images/iot-integration-large.jpg" alt="IoT Integration">
+            <img src="../company-website/images/services.jpg" alt="IoT Integration">
         </div>
     </div>
 </section>
@@ -257,8 +290,8 @@
     <!-- JavaScript File -->
     <script src="js/script.js">
     </script>
+    
 
 
 </body>
 </html>
-
