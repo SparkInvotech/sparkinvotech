@@ -102,12 +102,11 @@
 
 
 
-<!-- Solutions Section -->
 
+<!-- Solutions Section -->
 <section id="solutions" class="solutions">
     <h2>Our Solutions</h2>
     <div class="solutions-container">
-        <!-- Products Section -->
         <div class="solutions-category products">
             <h3>Our Products</h3>
             <div class="product-cards">
@@ -117,8 +116,7 @@
                     <div class="solution-content">
                         <h4>OCU (Optical Control Unit)</h4>
                         <p>An advanced optical control unit for precise machinery operations.</p>
-                        <a href="javascript:void(0)" class="open-modal btn" data-modal="ocuModal">Learn More</a>
-
+                        <button class="open-modal btn" data-modal="ocu-modal">Learn More</button>
                     </div>
                 </div>
                 <!-- Product 2: Biogas Plant -->
@@ -127,8 +125,7 @@
                     <div class="solution-content">
                         <h4>Biogas Plant</h4>
                         <p>Efficient biogas solutions for sustainable energy production.</p>
-                        <a href="javascript:void(0)" class="open-modal btn" data-modal="ocuModal">Learn More</a>
-
+                        <button class="open-modal btn" data-modal="biogas-modal">Learn More</button>
                     </div>
                 </div>
                 <!-- Product 3: ECU -->
@@ -137,8 +134,7 @@
                     <div class="solution-content">
                         <h4>ECU (Electronic Control Unit)</h4>
                         <p>State-of-the-art electronic control units for various applications.</p>
-                        <a href="javascript:void(0)" class="open-modal btn" data-modal="ocuModal">Learn More</a>
-
+                        <button class="open-modal btn" data-modal="ecu-modal">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -146,33 +142,33 @@
     </div>
 </section>
 
-<!-- Product Modals -->
+<!-- Modal Structure for OCU -->
 <div id="ocu-modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close-modal">&times;</span>
         <h3>OCU (Optical Control Unit)</h3>
-        <img src="images/ocu.jpg" alt="OCU Image">
-        <p>An advanced optical control unit designed for precise operations in machinery. This unit utilizes the latest in optical technology for enhanced control and reliability.</p>
+        <p>This optical control unit offers precise operations for high-performance machinery. Designed for various industrial applications, it enhances control efficiency and reduces operational errors.</p>
     </div>
 </div>
 
+<!-- Modal Structure for Biogas Plant -->
 <div id="biogas-modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close-modal">&times;</span>
         <h3>Biogas Plant</h3>
-        <img src="images/biogas.jpeg" alt="Biogas Plant Image">
-        <p>The biogas plant provides an efficient solution for converting organic waste into renewable energy, promoting sustainability and reducing waste.</p>
+        <p>Our biogas plant solutions are designed for efficient waste-to-energy conversion, promoting sustainable energy with minimal environmental impact.</p>
     </div>
 </div>
 
+<!-- Modal Structure for ECU -->
 <div id="ecu-modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close-modal">&times;</span>
         <h3>ECU (Electronic Control Unit)</h3>
-        <img src="images/ecu.jpg" alt="ECU Image">
-        <p>Our Electronic Control Unit (ECU) offers top-tier performance for a wide range of applications, providing robust control and automation.</p>
+        <p>The Electronic Control Unit offers advanced performance for various electronic applications, ensuring optimal operational control and stability.</p>
     </div>
 </div>
+
 
 
 
@@ -231,12 +227,19 @@
             <p><i class="fas fa-phone-alt"></i> +91 7305634366</p>
             <p><i class="fas fa-envelope"></i> contact@sparkinvotech@gmail.com</p>
 
-            <!-- Social Media Icons -->
-            <div class="social-media">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
+          <!-- Social Media Icons -->
+<div class="social-media">
+    <a href="https://www.linkedin.com/company/spark-invotech/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.instagram.com/sparkinvotech/profilecard/?igsh=OWFiZHBtd3NiYnM2" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/your-channel-id" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+
 
             <!-- Google Map -->
             <div class="map">
@@ -287,9 +290,31 @@
 <a href="#" class="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></a>
 
 
-    <!-- JavaScript File -->
-    <script src="js/script.js">
-    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.open-modal').forEach(button => {
+    button.addEventListener('click', function() {
+        const modalId = this.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'flex';
+    });
+});
+
+document.querySelectorAll('.close-modal').forEach(button => {
+    button.addEventListener('click', function() {
+        this.closest('.modal').style.display = 'none';
+    });
+});
+
+window.addEventListener('click', function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+    });
+</script>
+
     
 
 
